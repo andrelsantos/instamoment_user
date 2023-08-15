@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de senha</title>
+    <style>
+        body {
+            background-color: #E6F5F4;
+            padding: 0px 32px;
+        }
+
+        .header {
+            width: 100%;
+            text-align: center;
+            padding-top: 32px;
+            padding-bottom: 24px;
+        }
+
+        .header-logo {
+            height: 40px;
+            width: auto;
+            object-fit: cover;
+        }
+
+        .content {
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+
+        table {
+            width: 100%;
+            padding: 40px 16px 32px 16px;
+        }
+
+        p {
+            font-weight: normal !important;
+            font-size: 16px !important;
+            line-height: 20px !important;
+            margin: 0px !important;
+            color: rgba(0, 0, 0, 0.87);
+        }
+
+        p.congratulation {
+            font-size: 14px !important;
+            line-height: 16px !important;
+            margin-bottom: 8px !important;
+        }
+
+        h1 {
+            margin: 0px !important;
+            font-weight: 500 !important;
+            font-size: 28px !important;
+            line-height: 32px !important;
+            color: rgba(0, 0, 0, 0.87);
+        }
+
+        .card-code {
+            width: 100% !important;
+            height: 42px;
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+            background: #F7F8FD;
+            border-radius: 3px !important;
+            margin: 32px 0px !important;
+            text-align: center;
+        }
+
+        span.code {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 42px;
+            color: #142454;
+        }
+
+        .footer {
+            padding: 24px 22px 28px 22px;
+        }
+
+        .align-center {
+            text-align: center;
+            margin-top: 10px !important;
+        }
+
+        p.observation {
+            font-size: 12px !important;
+            line-height: 16px !important;
+            color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+<div class="header">
+    <img class="header-logo"
+         src="https://firebasestorage.googleapis.com/v0/b/lobbo-e2183.appspot.com/o/logo.svg?alt=media&token=5a440e75-43c2-451a-896c-e2473e25e4dc&_gl=1*11mnuoc*_ga*MTM2NTU3ODUxNi4xNjg1MTMzMDcy*_ga_CW55HF8NVT*MTY4NTk5NzU5NS4xMC4xLjE2ODU5OTc2NzMuMC4wLjA">
+</div>
+<div class="content">
+    <table>
+        <tr>
+            <td>
+                <h1 style="margin-bottom: 24px !important;"><strong th:text="${titulo}"></strong></h1>
+                <div class="card-code"><span class="code" th:text="${code}"></span></div>
+                <p style="margin-bottom: 16px !important;">Olá, <strong th:text="${name} + '!'"></strong></p>
+                <p>Para efetuar a recuperação de senha e voltar e voltar a ter acesso ao aplicativo, informe o código enviado acima.</p>
+                <p></p>
+                <strong><p>Atenciosamente,</strong></p>
+                <strong><p>Equipe Lobbo</strong></p>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="footer">
+    <p class="observation align-center"
+       th:text="'©' + ${year} + ' Lobbo - Todos os direitos reservados.'"></p>
+    <br>
+    <p>Este é um e-mail automático. Não responda.</p>
+</div>
+<script type="text/javascript">(function () {
+    window['__CF$cv$params'] = {
+        r: '6dda6f293bef568c',
+        m: '8yd_J9tkp5FA8WyANtsX55bxOHe2TKQZxidEJA7iCLc-1644885096-0-AV3bucGvAHxzLrpZUoWn7LcRWGf/OoYR1SbAaM2kDVSEUiYW0oeaxd7FKnqWb1WmU8zqXupHvy+F5PWoUUqFjuOYwtx82sQhLzsDgMrhO0S6UVFQJNNmqbmckgQO1iDtTsNrXxCfWmjES0XNlfRPaCzKlNyFMHN5BtlvOAzHt27uFRsSaMyHaI2KZyVq33YvPKuzUXTYp1jpSLyhGJSGn5HOWfVkzFnKga3aR88jQvv5',
+        s: [0x2900a90da7, 0x24c44fb137],
+    }
+})();</script>
+<script type="text/javascript">(function () {
+    window['__CF$cv$params'] = {
+        r: '6dda7013dd41f728',
+        m: 'UWjou4tiVYpYGQeHPQUs9ClNluj.I87SdPEHkcQw66Q-1644885133-0-AWz5FK0m9/s9KFfzhnlf4Bv0YkXAbEEIubFP6UQht6xkmVvxa9alKKjyb5J3EZxWg5OrsQ4ktQhBhDg69wCCrAUTCYdtzm4D9sn+WRlri8Tv9kMkMemaGuHBAM2M91gYPjszeKaF+swVWghKidbfJFqzX6Ob7SPfsMHumV0C3zmVzUOzG75YPVD8RIEXedaCXKXxYjPWXjuTtzLRrZbK8/lgSCg3HUfArqDe45+YAyxo',
+        s: [0x8ae6a5f0a7, 0xf517f61256],
+    }
+})();</script>
+</body>
+</html>
